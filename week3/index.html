@@ -1,35 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sabanal's Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabanal's Personal Website</title>
+  <style>
+    body {
+      background-color: BlanchedAlmond;
+      padding: 20px;
+      margin: 0;
+      text-align: left; 
+    }
+    h1 {font-family: Times New Roman;} 
+    h2 {font-family: Verdana;} 
+    h3 {font-family: Courier New;} 
+    strong {color: red;}
+    em {color: purple;}
+    p {font-family: Garamond;}
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    ol {
+      list-style-position: inside;
+      padding: 0;
+      text-align: center;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+	 .flex-container2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+	  text-align: center;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
-<body style="background-color:grey;">
-<style>
-  h2 {color:green;font-family:Verdana;} 
-   h1 {color:red;font-family:Papyrus;} 
-   h3 {color:turquoise;font-family:Courier New;} 
-		strong {color:orange;}
-		em {color:purple;}
-		p {font-family:Garamond; color:crimson; font-style:italic;}
-		li {color:blue;}
-</style>
-<h1> Hello There and Welcome to the website.</h1>
+<body>
 
-<h2>This is <strong>Me.</strong></h2>
-<a href="https://ibb.co/x7F4XMP"><img src="https://i.ibb.co/MCBXZRW/20230531-111239.jpg" alt="20230531-111239" border="0"width="400" height="400"></a>
+  <div class="dropdown">
+  <h1> Menu </h1>
+    <div class="dropdown-content">
+      <a href="#introduction">Introduction</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#dog">Dog</a>
+    </div>
+  </div>
 
-<h2>And this my dog, <em>Given.</em></h2>
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/Cm33XB4/20230623-170243.jpg" alt="20230623-170243" border="0" width="400" height="400"></a>
+  <div class="flex-container" id="introduction">
+    <div>
+      <h2>My name is <strong>Alexus Sabanal</strong>.</h2>
+      <p>I am a 23 Year Old BSCS SF Student of Asia Pacific College. And I fully intend on completing this class through any means necessary. That being said. I do have a few weaknesses such as the habit of spacing out all the time. But of course. I do the best that I can to supplement them</p>
+    </div>
+    <a href="https://ibb.co/x7F4XMP"><img src="https://i.ibb.co/MCBXZRW/20230531-111239.jpg" alt="20230531-111239" width="400" height="400"></a>
+  </div>
 
-<h3>He likes to do weird things sometimes ;-;</h3>
+  <div class="flex-container2" id="hobbies">
+    <div style="margin: 0 auto;"> <!-- Center the content within the div -->
+      <h2>These are some of my current hobbies:</h2>
+      <ol>
+        <li><strong>Writing</strong><a href="https://ibb.co/Mf2W17k"><img src="https://i.ibb.co/8bKTx9g/images-2.jpg" alt="Writing"></a> </li>
+        <li><strong>Gaming</strong><a href="https://ibb.co/hY885yC"><img src="https://i.ibb.co/1z22VLb/images.jpg" alt="Gaming"></a> </li>
+        <li><strong>Walking around town</strong> <a href="https://ibb.co/mvMzH8k"><img src="https://i.ibb.co/JxMkzQV/images-1.jpg" alt="Walking"></a> </li>
+        <li><strong>And many more rather risque ones that I cannot show here out of fear of being judged for them.</strong>
+      </ol>
+    </div>
+  </div>
 
-<h2>My name is <strong>Alexus Sabanal</strong>.</h2>
-<p>I am a 23 Year Old BSCS SF Student of Asia Pacific College. And I fully intend on completing this class through any means necessary.</p>
+  <div class="flex-container2" id="dog">
+    <div>
+      <h2>But of course at the end of the day. I am nothing more than a regular old human being who, like most, strives to leave a good mark in this world during my fleeting lifetime. Just as how my dog wishes to do so too with his rather strange antics</h2>
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co/Cm33XB4/20230623-170243.jpg" alt="20230623-170243" border="0" width="400" height="400"></a>
+    </div>
+  </div>
 
- <h2> These are some of my hobbies:</h2>
-    <ol> <li>Writing</li><li>Gaming</li><li> Walking around town</li></ol>
+  <h1>Regardless, That Would Be All. Thank You Very Much and have a nice day.</h1>
 
-<h2> And many more </h2>
-<h1> Thank You Very Much and have a nice day. </h1>
+  <!-- Buttons for Facebook and LinkedIn -->
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
+    <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
+  </div>
 </body>
 </html>
