@@ -57,39 +57,6 @@
       display: block;
     }
   </style>
-  <script>
-    // JavaScript array for hobbies information
-    var hobbiesArray = [
-      { name: "Writing", image: "https://i.ibb.co/8bKTx9g/images-2.jpg" },
-      { name: "Gaming", image: "https://i.ibb.co/1z22VLb/images.jpg" },
-      { name: "Walking around town", image: "https://i.ibb.co/JxMkzQV/images-1.jpg" }
-      // Add more hobbies as needed
-    ];
-
-    // Function to display hobbies dynamically
-    function displayHobbies() {
-      var hobbiesList = document.getElementById("hobbies-list");
-      var hobbyIndex = 0;
-
-      function displayNextHobby() {
-        var hobby = hobbiesArray[hobbyIndex];
-        var listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>${hobby.name}</strong> <a href="${hobby.image}" target="_blank"><img src="${hobby.image}" alt="${hobby.name}"></a>`;
-        hobbiesList.appendChild(listItem);
-
-        // Increment the counter or reset it if all hobbies have been displayed
-        hobbyIndex = (hobbyIndex + 1) % hobbiesArray.length;
-
-        // Call the function again after a delay (adjust as needed)
-        if (hobbyIndex < hobbiesArray.length) {
-          setTimeout(displayNextHobby, 1000); // Adjust the delay as needed (currently set to 1 second)
-        }
-      }
-
-      // Start displaying hobbies
-      displayNextHobby();
-    }
-  </script>
 </head>
 <body>
 
@@ -97,7 +64,7 @@
   <h1> Menu </h1>
     <div class="dropdown-content">
       <a href="#introduction">Introduction</a>
-      <a href="#hobbies" onclick="displayHobbies()">Hobbies</a>
+      <a href="#hobbies">Hobbies</a>
       <a href="#dog">Dog</a>
     </div>
   </div>
@@ -113,7 +80,12 @@
   <div class="flex-container2" id="hobbies">
     <div style="margin: 0 auto;"> <!-- Center the content within the div -->
       <h2>These are some of my current hobbies:</h2>
-      <ol id="hobbies-list"></ol>
+      <ol>
+        <li><strong>Writing</strong><a href="https://ibb.co/Mf2W17k"><img src="https://i.ibb.co/8bKTx9g/images-2.jpg" alt="Writing"></a> </li>
+        <li><strong>Gaming</strong><a href="https://ibb.co/hY885yC"><img src="https://i.ibb.co/1z22VLb/images.jpg" alt="Gaming"></a> </li>
+        <li><strong>Walking around town</strong> <a href="https://ibb.co/mvMzH8k"><img src="https://i.ibb.co/JxMkzQV/images-1.jpg" alt="Walking"></a> </li>
+        <li><strong>And many more rather risque ones that I cannot show here out of fear of being judged for them.</strong>
+      </ol>
     </div>
   </div>
 
@@ -125,8 +97,8 @@
   </div>
 
   <h1>Regardless, That Would Be All. Thank You Very Much and have a nice day.</h1>
-  
-  //Buttons for Facebook and LinkedIn:
+
+  <!-- Buttons for Facebook and LinkedIn -->
   <div style="text-align: center; margin-top: 20px;">
     <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
     <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
