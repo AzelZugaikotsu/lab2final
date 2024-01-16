@@ -57,6 +57,9 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    .hidden {
+      display: none;
+    }
   </style>
   <script>
     // JavaScript array for hobbies information
@@ -76,6 +79,12 @@
         } else {
           section.style.display = 'none'; // Hide other sections
         }
+      });
+
+      // Show or hide the additional content based on the sectionId
+      var additionalContent = document.querySelectorAll('.hidden');
+      additionalContent.forEach(function(content) {
+        content.style.display = (sectionId === 'dog') ? 'block' : 'none';
       });
     }
 
@@ -111,7 +120,7 @@
   <!-- Introduction section -->
   <div class="flex-container2" id="introduction">
     <div>
-      <h2>My name is <strong>Alexus Sabanal</strong>.</h2>
+      <h2> Good Afternoon, My name is <strong>Alexus Sabanal</strong>.</h2>
       <p>I am a 23-year-old BSCS SF Student of Asia Pacific College. And I fully intend on completing this class through any means necessary. That being said, I do have a few weaknesses such as the habit of spacing out all the time. But of course, I do the best that I can to supplement them.</p>
     </div>
     <a href="https://ibb.co/x7F4XMP"><img src="https://i.ibb.co/MCBXZRW/20230531-111239.jpg" alt="20230531-111239" width="400" height="400"></a>
@@ -131,21 +140,25 @@
       <h2>But of course at the end of the day, I am nothing more than a regular old human being who, like most, strives to leave a good mark in this world during my fleeting lifetime. Just as how my dog wishes to do so too with his rather strange antics.</h2>
       <a href="https://imgbb.com/"><img src="https://i.ibb.co/Cm33XB4/20230623-170243.jpg" alt="20230623-170243" border="0" width="400" height="400"></a>
     </div>
+    
+    <!-- Additional content (hidden by default) -->
+    <div class="hidden">
+      <!-- Closing statement -->
+      <h1>Regardless, That Would Be All. Thank You Very Much and have a nice day.</h1>
+
+      <!-- Display the current date -->
+      <script>
+        var currentDate = new Date();
+        document.write("<p style='text-align: center;'>Current Date: " + currentDate.toDateString() + "</p>");
+      </script>
+
+      <!-- Buttons for Facebook and LinkedIn -->
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
+        <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
+      </div>
+    </div>
   </div>
 
-  <!-- Closing statement -->
-  <h1>Regardless, That Would Be All. Thank You Very Much and have a nice day.</h1>
-
-  <!-- Display the current date -->
-  <script>
-    var currentDate = new Date();
-    document.write("<p style='text-align: center;'>Current Date: " + currentDate.toDateString() + "</p>");
-  </script>
-
-  <!-- Buttons for Facebook and LinkedIn -->
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
-    <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
-  </div>
 </body>
 </html>
