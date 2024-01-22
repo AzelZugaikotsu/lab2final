@@ -95,10 +95,20 @@
           hobbiesList.appendChild(listItem);
         });
       }
+
+      // Function to change the background color
+      changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+      }
     }
 
     // Create an instance of the PersonalWebsite class
     const myWebsite = new PersonalWebsite();
+
+    // Display a welcome message using BOM
+    window.onload = function() {
+      alert("Welcome to My Personal Website!");
+    };
   </script>
 </head>
 <body>
@@ -138,7 +148,6 @@
       <h1>Regardless, That Would Be All. Thank You Very Much and have a nice day.</h1>
 
       <!-- Display the current date -->
-    //implements HTML DOM by using the document write function
       <script>
         var currentDate = new Date();
         document.write("<p style='text-align: center;'>Current Date: " + currentDate.toDateString() + "</p>");
@@ -148,6 +157,11 @@
       <div style="text-align: center; margin-top: 20px;">
         <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
         <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
+      </div>
+
+      <!-- Button to change background color -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button onclick="myWebsite.changeBackgroundColor('LightSkyBlue')">Change Background Color</button>
       </div>
     </div>
   </div>
