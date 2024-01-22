@@ -62,48 +62,43 @@
     }
   </style>
   <script>
-    // JavaScript array for hobbies information
-//The Objects present in this array are the names and images
-    var hobbiesArray = [
-      { name: "Writing", image: "https://i.ibb.co/8bKTx9g/images-2.jpg" },
-      { name: "Gaming", image: "https://i.ibb.co/1z22VLb/images.jpg" },
-      { name: "Walking around town", image: "https://i.ibb.co/JxMkzQV/images-1.jpg" }
-      // Add more hobbies as needed
-    ];
+    // JavaScript class for handling website functionality
+    class PersonalWebsite {
+      constructor() {
+        this.hobbiesArray = [
+          { name: "Writing", image: "https://i.ibb.co/8bKTx9g/images-2.jpg" },
+          { name: "Gaming", image: "https://i.ibb.co/1z22VLb/images.jpg" },
+          { name: "Walking around town", image: "https://i.ibb.co/JxMkzQV/images-1.jpg" }
+          // Add more hobbies as needed
+        ];
+      }
 
-    // Function to hide all sections except the one selected
-    function toggleSections(sectionId) {
-      var sections = document.querySelectorAll('.flex-container2');
-      sections.forEach(function(section) {
-        if (section.id === sectionId) {
-          section.style.display = 'flex'; // Display the selected section
-        } else {
-          section.style.display = 'none'; // Hide other sections
-        }
-      });
+      toggleSections(sectionId) {
+        const sections = document.querySelectorAll('.flex-container2');
+        sections.forEach(section => {
+          section.style.display = (section.id === sectionId) ? 'flex' : 'none';
+        });
 
-      // Show or hide the additional content based on the sectionId
-      var additionalContent = document.querySelectorAll('.hidden');
-      additionalContent.forEach(function(content) {
-        content.style.display = (sectionId === 'dog') ? 'block' : 'none';
-      });
-    }
+        const additionalContent = document.querySelectorAll('.hidden');
+        additionalContent.forEach(content => {
+          content.style.display = (sectionId === 'dog') ? 'block' : 'none';
+        });
+      }
 
-    // Function to display hobbies dynamically
-    function displayHobbies() {
-      var hobbiesList = document.getElementById("hobbies-list");
+      displayHobbies() {
+        const hobbiesList = document.getElementById("hobbies-list");
+        hobbiesList.innerHTML = "";
 
-      // Clear the current hobbies list
-      hobbiesList.innerHTML = "";
-
-      // Display hobbies
-      for (var i = 0; i < hobbiesArray.length; i++) {
-        var hobby = hobbiesArray[i];
-        var listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>${hobby.name}</strong> <a href="${hobby.image}" target="_blank"><img src="${hobby.image}" alt="${hobby.name}"></a>`;
-        hobbiesList.appendChild(listItem);
+        this.hobbiesArray.forEach(hobby => {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `<strong>${hobby.name}</strong> <a href="${hobby.image}" target="_blank"><img src="${hobby.image}" alt="${hobby.name}"></a>`;
+          hobbiesList.appendChild(listItem);
+        });
       }
     }
+
+    // Create an instance of the PersonalWebsite class
+    const myWebsite = new PersonalWebsite();
   </script>
 </head>
 <body>
@@ -112,9 +107,9 @@
   <div class="dropdown">
     <h1> Menu </h1>
     <div class="dropdown-content">
-      <a href="javascript:void(0);" onclick="toggleSections('introduction')">Introduction</a>
-      <a href="javascript:void(0);" onclick="toggleSections('hobbies'); displayHobbies()">Hobbies</a>
-      <a href="javascript:void(0);" onclick="toggleSections('dog')">Dog</a>
+      <a href="javascript:void(0);" onclick="myWebsite.toggleSections('introduction')">Introduction</a>
+      <a href="javascript:void(0);" onclick="myWebsite.toggleSections('hobbies'); myWebsite.displayHobbies()">Hobbies</a>
+      <a href="javascript:void(0);" onclick="myWebsite.toggleSections('dog')">Dog</a>
     </div>
   </div>
 
@@ -152,6 +147,7 @@
       <div style="text-align: center; margin-top: 20px;">
         <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
         <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
+      </div>
     </div>
   </div>
 
