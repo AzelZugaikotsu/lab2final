@@ -107,7 +107,7 @@
 
     // Display a welcome message using BOM
     window.onload = function() {
-      alert("Welcome to My Personal Website!");
+      alert("Good Morning! Welcome to My Personal Website! Please Hover over the Menu Button and Press one of three options in order to begin!");
     };
   </script>
 </head>
