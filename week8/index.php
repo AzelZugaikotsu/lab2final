@@ -58,7 +58,7 @@
       display: block;
     }
     .hidden {
-      display: none;
+       display: none;
     }
   </style>
   <script>
