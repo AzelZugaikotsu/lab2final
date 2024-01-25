@@ -136,7 +136,11 @@
   <div class="flex-container2" id="hobbies">
     <div style="margin: 0 auto;"> <!-- Center the content within the div -->
       <h2>These are some of my current hobbies:</h2>
-      <ol id="hobbies-list"></ol>
+      <ol id="hobbies-list">
+        <?php foreach ($hobbiesArray as $hobby): ?>
+          <li><strong><?php echo $hobby['name']; ?></strong> <a href="<?php echo $hobby['image']; ?>" target="_blank"><img src="<?php echo $hobby['image']; ?>" alt="<?php echo $hobby['name']; ?>"></a></li>
+        <?php endforeach; ?>
+      </ol>
     </div>
   </div>
 
