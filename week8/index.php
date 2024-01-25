@@ -157,7 +157,7 @@
         echo "<p style='text-align: center;'>Current Date: $currentDate</p>";
       ?>
 
-      <!-- Buttons for Facebook and LinkedIn -->
+      <!-- Buttons for Facebook and LinkedIn. -->
       <div style="text-align: center; margin-top: 20px;">
         <a href="https://www.facebook.com/alexusnorsaid/" target="_blank"><button>Facebook</button></a>
         <a href="https://www.linkedin.com/in/alexus-sabanal-b15712194/" target="_blank"><button>LinkedIn</button></a>
