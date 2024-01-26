@@ -4,8 +4,27 @@
 <style>
 .error {color: #FF0000;}
 </style>
+<script>
+// JavaScript function to redirect to another page
+function redirectToAnotherPage() {
+    window.location.href = 'website.php';
+}
+
+// JavaScript function to detect changes in form fields and trigger redirection
+function detectChanges() {
+    // Select all input fields in the form
+    var formInputs = document.querySelectorAll('input[type="text"], textarea, input[type="radio"]');
+
+    // Add event listener to each input field
+    formInputs.forEach(function(input) {
+        input.addEventListener('input', function() {
+            redirectToAnotherPage();
+        });
+    });
+}
+</script>
 </head>
-<body>  
+<body onload="detectChanges();">  
 
 <?php
 // define variables and set to empty values
