@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-.error {color:blanched_almond;}
+.error {color:BlanchedAlmond;}
 </style>
 </head>
 <body>  
