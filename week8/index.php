@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-.error {color:BlanchedAlmond;}
+.error {color:Red;}
 </style>
 </head>
 <body>  
@@ -98,6 +98,25 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "myDB";
+
+//create & check connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {die ("Connection has failed: " . $conn->connect_error);}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('$name','$website','$email')";
+
+if ($conn->query($sql) === TRUE){
+echo "New Record Created Successfully"}
+else { echo "Error:". $sql . "<br>" . $conn->error; }
+
+$conn->close();
 ?>
 
 </body>
