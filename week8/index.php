@@ -3,6 +3,9 @@
 <head>
 <style>
 .error {color:Red;}
+body {
+    background-color: BlanchedAlmond;
+}
 </style>
 </head>
 <body>  
